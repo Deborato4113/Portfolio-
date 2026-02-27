@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO & Open Graph ── -->
+  <title>Deborato Chaudhury — Full Stack Developer</title>
+  <meta name="description" content="Full Stack Web Developer specializing in PHP, MySQL, JavaScript, Node.js and modern frontend tools. CS student building impactful digital solutions." />
+  <meta name="keywords" content="Deborato Chaudhury, Full Stack Developer, PHP, MySQL, JavaScript, Node.js, Web Developer, India" />
+  <meta name="author" content="Deborato Chaudhury" />
+  <meta property="og:title" content="Deborato Chaudhury — Full Stack Developer" />
+  <meta property="og:description" content="Building dynamic, secure, and user-friendly web applications. CS student passionate about clean architecture and scalable design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://deboratochaudhury.dev" />
+  <meta property="og:image" content="og-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Deborato Chaudhury — Full Stack Developer" />
+  <meta name="twitter:description" content="Building dynamic, secure, and user-friendly web applications." />
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230a0a0a'/><text y='.9em' font-size='72' x='10' fill='%23c8f060'>D</text></svg>">
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- PAGE TRANSITION CURTAIN -->
+  <div id="curtain"></div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <div id="cursor-text"></div>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div id="preloader-num">00</div>
+      <div id="preloader-label">Initialising</div>
+    </div>
+    <div id="preloader-bar"></div>
+  </div>
+
+  <!-- ── NAV ── -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">DC<span class="nav-logo-year"> — 2025</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <!-- Mobile Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about"        class="mob-link">About</a></li>
+      <li><a href="#skills"       class="mob-link">Skills</a></li>
+      <li><a href="#work"         class="mob-link">Work</a></li>
+      <li><a href="#contact"      class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <!-- Animated mesh background -->
+    <canvas id="heroCanvas"></canvas>
+
+    <div class="hero-bg-text" id="heroBgText">Developer</div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Full Stack Web Developer</div>
+      <h1 class="hero-title">
+        <span class="scramble-word" data-text="Building">Building</span><br>
+        <em class="scramble-word" data-text="smart">smart</em> <span class="scramble-word" data-text="things">things</span><br>
+        <span class="scramble-word" data-text="for the web">for the web</span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-desc">
+          Crafting responsive web experiences with clean architecture and modern design.<br>
+          PHP &middot; MySQL &middot; JavaScript &middot; Node.js
+        </p>
+        <div class="hero-scroll">
+          <div class="hero-scroll-line"></div>
+          Scroll
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">Full Stack Development</span>
+      <span class="marquee-item">PHP & MySQL</span>
+      <span class="marquee-item">JavaScript</span>
+      <span class="marquee-item">Tailwind CSS</span>
+      <span class="marquee-item">Firebase</span>
+      <span class="marquee-item">Node.js</span>
+      <span class="marquee-item">Real-Time Apps</span>
+      <span class="marquee-item">Clean Architecture</span>
+      <span class="marquee-item">Full Stack Development</span>
+      <span class="marquee-item">PHP & MySQL</span>
+      <span class="marquee-item">JavaScript</span>
+      <span class="marquee-item">Tailwind CSS</span>
+      <span class="marquee-item">Firebase</span>
+      <span class="marquee-item">Node.js</span>
+      <span class="marquee-item">Real-Time Apps</span>
+      <span class="marquee-item">Clean Architecture</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="section-label">About Me</div>
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 class="about-heading">
+          CS Student &<br>
+          <em>Full Stack</em><br>
+          Developer
+        </h2>
+        <div class="location-badge">
+          <div class="location-dot"></div>
+          Bhubaneswar, Odisha, India
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p class="about-text">
+          I'm Deborato Chaudhury, a Computer Science student focused on full-stack web development. I build dynamic, secure, and user-friendly web applications using PHP, MySQL, JavaScript, and modern frontend tools like Tailwind CSS.
+        </p>
+        <p class="about-text">
+          I'm passionate about solving real-world problems through clean architecture, scalable design, and continuous learning. My goal is to grow as a professional software engineer and build impactful digital solutions.
+        </p>
+
+        <!-- Timeline -->
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <div class="tl-year">2005</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-title">Born — Bhubaneswar, India</div>
+            </div>
+          </div>
+          <div class="tl-item reveal reveal-delay-1">
+            <div class="tl-year">2023</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-title">Started CS Degree</div>
+              <div class="tl-sub">Began learning HTML, CSS, C/C++</div>
+            </div>
+          </div>
+          <div class="tl-item reveal reveal-delay-2">
+            <div class="tl-year">2024</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-title">Went Full Stack</div>
+              <div class="tl-sub">PHP, MySQL, JavaScript, Firebase, Node.js</div>
+            </div>
+          </div>
+          <div class="tl-item reveal reveal-delay-3">
+            <div class="tl-year">2025</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-title">Building Real Projects</div>
+              <div class="tl-sub">Chat App, Weather App, Solar Simulator & more</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-item reveal">
+            <div class="stat-num counter" data-target="3">0</div>
+            <div class="stat-label">Projects Live</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-num counter" data-target="10">0</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-num counter" data-target="2">0</div>
+            <div class="stat-label">Years Coding</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Things To Learn</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="section-label">Skills</div>
+    <div class="skills-intro">
+      <h2 class="skills-heading reveal">Technical<br><em>Arsenal</em></h2>
+      <p class="skills-sub reveal reveal-delay-2">A toolkit built through real projects — not just tutorials. Every skill here was earned building something that actually works.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal" data-tilt>
+        <div class="skill-card-num">01</div>
+        <div class="skill-card-title">Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Responsive Design</span><span class="skill-tag">Vite</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1" data-tilt>
+        <div class="skill-card-num">02</div>
+        <div class="skill-card-title">Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PHP</span><span class="skill-tag">Node.js</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2" data-tilt>
+        <div class="skill-card-num">03</div>
+        <div class="skill-card-title">Database</div>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span><span class="skill-tag">Firebase</span>
+          <span class="skill-tag">Realtime DB</span>
+          <span class="skill-tag">Normalization</span>
+        </div>
+      </div>
+      <div class="skill-card reveal" data-tilt>
+        <div class="skill-card-num">04</div>
+        <div class="skill-card-title">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">JavaScript</span><span class="skill-tag">PHP</span>
+          <span class="skill-tag">C</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1" data-tilt>
+        <div class="skill-card-num">05</div>
+        <div class="skill-card-title">Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">VS Code</span><span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span><span class="skill-tag">XAMPP</span>
+          <span class="skill-tag">Socket.IO</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2" data-tilt>
+        <div class="skill-card-num">06</div>
+        <div class="skill-card-title">Core Strengths</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Problem Solving</span><span class="skill-tag">Debugging</span>
+          <span class="skill-tag">Fast Learner</span><span class="skill-tag">Full-Stack Apps</span>
+          <span class="skill-tag">AI Exposure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WORK ── -->
+  <section id="work">
+    <div class="section-label">Work</div>
+    <div class="work-header">
+      <h2 class="work-heading reveal">Selected<br><em>Projects</em></h2>
+    </div>
+
+    <!-- Horizontal scroll projects -->
+    <div class="projects-scroll-wrapper">
+      <div class="projects-scroll-track" id="projectsTrack">
+
+        <div class="proj-card reveal">
+          <div class="proj-card-preview">
+            <!-- SVG mockup for Chat App -->
+            <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" class="proj-svg">
+              <rect width="480" height="300" fill="#111"/>
+              <rect x="20" y="20" width="120" height="260" rx="6" fill="#161616"/>
+              <rect x="160" y="20" width="300" height="260" rx="6" fill="#161616"/>
+              <rect x="30" y="30" width="100" height="12" rx="3" fill="#c8f060" opacity=".7"/>
+              <rect x="30" y="52" width="80" height="8" rx="2" fill="#333"/>
+              <rect x="30" y="70" width="90" height="8" rx="2" fill="#222" opacity=".8"/>
+              <rect x="30" y="88" width="70" height="8" rx="2" fill="#222" opacity=".6"/>
+              <rect x="30" y="106" width="85" height="8" rx="2" fill="#c8f060" opacity=".3"/>
+              <rect x="170" y="30" width="280" height="16" rx="3" fill="#1e1e1e"/>
+              <rect x="176" y="35" width="120" height="6" rx="2" fill="#c8f060" opacity=".5"/>
+              <!-- chat bubbles -->
+              <rect x="170" y="60" width="160" height="28" rx="8" fill="#c8f060" opacity=".15"/>
+              <rect x="176" y="68" width="100" height="6" rx="2" fill="#c8f060" opacity=".6"/>
+              <rect x="280" y="100" width="150" height="28" rx="8" fill="#1e1e1e"/>
+              <rect x="286" y="108" width="110" height="6" rx="2" fill="#555"/>
+              <rect x="170" y="140" width="180" height="28" rx="8" fill="#c8f060" opacity=".15"/>
+              <rect x="176" y="148" width="130" height="6" rx="2" fill="#c8f060" opacity=".6"/>
+              <rect x="280" y="180" width="130" height="28" rx="8" fill="#1e1e1e"/>
+              <rect x="286" y="188" width="90" height="6" rx="2" fill="#555"/>
+              <!-- input bar -->
+              <rect x="170" y="255" width="280" height="16" rx="8" fill="#1e1e1e"/>
+              <circle cx="440" cy="263" r="6" fill="#c8f060" opacity=".7"/>
+            </svg>
+            <div class="proj-card-overlay">
+              <span>Real-Time Chat</span>
+            </div>
+          </div>
+          <div class="proj-card-body">
+            <div class="proj-card-num">01</div>
+            <div class="proj-card-name">Real-Time Chat App</div>
+            <div class="proj-card-stack">Node.js · Express · Socket.IO · Firebase</div>
+            <p class="proj-card-desc">Scalable real-time chat platform with authentication, live messaging, and persistent rooms. Bi-directional communication via Socket.IO with responsive UI.</p>
+            <div class="proj-card-links">
+              <a href="https://github.com/Deborato4113" target="_blank" class="proj-btn">GitHub ↗</a>
+              <a href="https://let-s-yap.onrender.com" target="_blank" class="proj-btn proj-btn-accent">Live ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal reveal-delay-1">
+          <div class="proj-card-preview">
+            <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" class="proj-svg">
+              <rect width="480" height="300" fill="#111"/>
+              <defs>
+                <radialGradient id="sky" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#1a3a5c"/>
+                  <stop offset="100%" stop-color="#0a0a0a"/>
+                </radialGradient>
+              </defs>
+              <rect width="480" height="300" fill="url(#sky)"/>
+              <!-- weather card -->
+              <rect x="100" y="30" width="280" height="240" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <!-- city name -->
+              <rect x="140" y="50" width="120" height="10" rx="3" fill="rgba(255,255,255,0.5)"/>
+              <!-- big temp -->
+              <text x="240" y="135" font-size="72" fill="#fff" opacity=".9" text-anchor="middle" font-family="sans-serif">24°</text>
+              <!-- condition -->
+              <rect x="180" y="150" width="120" height="8" rx="3" fill="rgba(255,255,255,0.3)"/>
+              <!-- sun icon -->
+              <circle cx="240" cy="82" r="16" fill="#f0c060" opacity=".8"/>
+              <!-- stats row -->
+              <rect x="115" y="195" width="60" height="6" rx="2" fill="rgba(200,240,96,.5)"/>
+              <rect x="210" y="195" width="60" height="6" rx="2" fill="rgba(96,208,240,.5)"/>
+              <rect x="305" y="195" width="60" height="6" rx="2" fill="rgba(240,96,96,.4)"/>
+              <!-- search bar -->
+              <rect x="120" y="220" width="240" height="24" rx="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <rect x="132" y="228" width="100" height="8" rx="2" fill="rgba(255,255,255,0.2)"/>
+            </svg>
+            <div class="proj-card-overlay"><span>Weather App</span></div>
+          </div>
+          <div class="proj-card-body">
+            <div class="proj-card-num">02</div>
+            <div class="proj-card-name">Weather Forecast App</div>
+            <div class="proj-card-stack">HTML · CSS · JavaScript · OpenWeather API</div>
+            <p class="proj-card-desc">Responsive weather app with real-time forecasts, smart search optimization, and reduced API calls for faster performance across all devices.</p>
+            <div class="proj-card-links">
+              <a href="https://github.com/Deborato4113" target="_blank" class="proj-btn">GitHub ↗</a>
+              <a href="https://deborato4113.github.io/Weather-app/" target="_blank" class="proj-btn proj-btn-accent">Live ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal reveal-delay-2">
+          <div class="proj-card-preview">
+            <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" class="proj-svg">
+              <defs>
+                <radialGradient id="space" cx="50%" cy="50%" r="70%">
+                  <stop offset="0%" stop-color="#050520"/>
+                  <stop offset="100%" stop-color="#000005"/>
+                </radialGradient>
+              </defs>
+              <rect width="480" height="300" fill="url(#space)"/>
+              <!-- stars -->
+              <circle cx="40"  cy="25"  r="1" fill="white" opacity=".6"/>
+              <circle cx="120" cy="60"  r="1" fill="white" opacity=".4"/>
+              <circle cx="300" cy="20"  r="1" fill="white" opacity=".7"/>
+              <circle cx="420" cy="80"  r="1" fill="white" opacity=".5"/>
+              <circle cx="60"  cy="200" r="1" fill="white" opacity=".3"/>
+              <circle cx="380" cy="250" r="1" fill="white" opacity=".6"/>
+              <circle cx="450" cy="30"  r="1" fill="white" opacity=".5"/>
+              <circle cx="200" cy="280" r="1" fill="white" opacity=".4"/>
+              <!-- Sun -->
+              <circle cx="240" cy="150" r="28" fill="#f0c060" opacity=".95"/>
+              <circle cx="240" cy="150" r="34" fill="#f0a030" opacity=".15"/>
+              <!-- orbits -->
+              <circle cx="240" cy="150" r="55"  fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+              <circle cx="240" cy="150" r="80"  fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+              <circle cx="240" cy="150" r="110" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+              <circle cx="240" cy="150" r="140" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+              <!-- planets -->
+              <circle cx="295" cy="150" r="5"  fill="#c89060"/>
+              <circle cx="160" cy="150" r="8"  fill="#6090c8"/>
+              <circle cx="240" cy="40"  r="10" fill="#e07030"/>
+              <circle cx="380" cy="150" r="7"  fill="#60c890" opacity=".9"/>
+            </svg>
+            <div class="proj-card-overlay"><span>Solar System</span></div>
+          </div>
+          <div class="proj-card-body">
+            <div class="proj-card-num">03</div>
+            <div class="proj-card-name">Solar System Simulator</div>
+            <div class="proj-card-stack">HTML · CSS · JavaScript</div>
+            <p class="proj-card-desc">Interactive simulation of 8 orbiting planets using polar mathematics. Animation-optimised for smooth 60fps performance with responsive canvas rendering.</p>
+            <div class="proj-card-links">
+              <a href="https://github.com/Deborato4113" target="_blank" class="proj-btn">GitHub ↗</a>
+              <a href="https://deborato4113.github.io/Solar-System/" target="_blank" class="proj-btn proj-btn-accent">Live ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- scroll hint -->
+      <div class="proj-scroll-hint">
+        <span>Drag to explore</span>
+        <svg width="32" height="12" viewBox="0 0 32 12"><path d="M0 6h28M22 1l6 5-6 5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="contact-left reveal">
+      <div class="section-label">Contact</div>
+      <h2 class="contact-heading">Let's<em>Connect</em></h2>
+      <p class="contact-tagline">Open to opportunities, collaborations, and interesting conversations. Drop a message — 100% chance I read it.</p>
+      <a href="/cdn-cgi/l/email-protection#92f6f7f0fde0f3e6fdf1faf3e7f6fae7e0eba0a2a0a1d2f5fff3fbfebcf1fdff" class="contact-email-big">
+        <span class="__cf_email__" data-cfemail="412524232e3320352e2229203425293433387371737201262c20282d6f222e2c">[email&#160;protected]</span>
+      </a>
+      <br>
+      <a href="https://drive.google.com/file/d/1WZBI0G63UYnIHJgwPXjdp9qH7fT8C26Y/view" class="resume-btn magnetic" target="_blank" rel="noopener">
+        ↓ &nbsp;Download Resume
+      </a>
+    </div>
+    <div class="contact-right reveal reveal-delay-2">
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-input form-textarea" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit magnetic">
+          <span class="form-submit-text">Send Message</span>
+          <span class="form-submit-icon">→</span>
+        </button>
+        <div class="form-success" id="formSuccess">
+          ✓ Message sent! I'll get back to you soon.
+        </div>
+      </form>
+
+      <!-- Social Links -->
+      <ul class="contact-links">
+        <li>
+          <a href="https://github.com/Deborato4113" target="_blank">
+            <span class="contact-link-name">GitHub</span>
+            <span class="contact-link-meta">github.com/Deborato4113 ↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deborato-chaudhury/" target="_blank">
+            <span class="contact-link-name">LinkedIn</span>
+            <span class="contact-link-meta">deborato-chaudhury ↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="/cdn-cgi/l/email-protection#254140474a5744514a464d4450414d50575c17151716654248444c490b464a48">
+            <span class="contact-link-name">Email</span>
+            <span class="contact-link-meta"><span class="__cf_email__" data-cfemail="482c2d2a273a293c272b20293d2c203d3a317a787a7b082f25292124662b2725">[email&#160;protected]</span> ↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="contact-link-name">Location</span>
+            <span class="contact-link-meta">Bhubaneswar, Odisha, India</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+919735895530">
+            <span class="contact-link-name">Phone</span>
+            <span class="contact-link-meta">+91 9735895530</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-left">© 2025 Deborato Chaudhury. All rights reserved.</div>
+    <div class="footer-motto">Build smart. Design clean. <span>Improve constantly.</span></div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
