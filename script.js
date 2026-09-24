@@ -392,26 +392,57 @@ function animateCounter(el) {
 })();
 
 /* ─────────────────────────────────────────────
-   15. CONTACT FORM  (mock submit)
+   15. CONTACT FORM  (sends real email via Resend, through /api/contact)
 ───────────────────────────────────────────── */
 (function initForm() {
   const form    = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
+  const errorEl = document.getElementById('formError');
   if (!form) return;
+
+  // This calls the serverless function at /api/contact.js, which uses the
+  // Resend API to send the email. That function only runs when this site is
+  // deployed on Vercel with a RESEND_API_KEY set — see api/contact.js for
+  // full setup instructions.
+  const ENDPOINT = '/api/contact';
 
   form.addEventListener('submit', e => {
     e.preventDefault();
     const btn = form.querySelector('.form-submit');
     btn.textContent = 'Sending…';
     btn.disabled    = true;
-    // Simulate network delay
-    setTimeout(() => {
-      form.reset();
-      btn.textContent = 'Send Message';
-      btn.disabled    = false;
-      success.style.display = 'block';
-      setTimeout(() => { success.style.display = 'none'; }, 4000);
-    }, 1200);
+    if (errorEl) errorEl.style.display = 'none';
+
+    const payload = {
+      name:    form.querySelector('[name="name"]').value,
+      email:   form.querySelector('[name="email"]').value,
+      message: form.querySelector('[name="message"]').value
+    };
+
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(res => {
+        if (!res.ok) throw new Error('Request failed');
+        return res.json();
+      })
+      .then(() => {
+        form.reset();
+        btn.textContent = 'Send Message';
+        btn.disabled    = false;
+        success.style.display = 'block';
+        setTimeout(() => { success.style.display = 'none'; }, 5000);
+      })
+      .catch(() => {
+        btn.textContent = 'Send Message';
+        btn.disabled    = false;
+        if (errorEl) {
+          errorEl.style.display = 'block';
+          setTimeout(() => { errorEl.style.display = 'none'; }, 5000);
+        }
+      });
   });
 })();
 
