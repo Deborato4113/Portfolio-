@@ -860,6 +860,24 @@ footer {
   font-size: 14px; font-style: italic; color: var(--muted);
 }
 .footer-motto span { color: var(--accent); }
+.footer-social {
+  display: flex; align-items: center; gap: 18px;
+  list-style: none; margin: 0; padding: 0;
+}
+.footer-social a {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  transition: all 0.25s var(--ease);
+}
+.footer-social a:hover {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
 
 /* ── SCROLL TO TOP ── */
 #scrollTop {
@@ -907,7 +925,8 @@ footer {
   .projects-scroll-track { padding-right: 24px; }
 
   #nav.scrolled { padding: 14px 24px; }
-  footer { flex-direction: column; gap: 12px; text-align: center; }
+  footer { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-social { justify-content: center; }
 
   #scrollTop { bottom: 24px; right: 24px; }
 }
